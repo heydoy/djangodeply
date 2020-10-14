@@ -22,10 +22,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '*#sredd$aj%b$g6u)d+-o%3ip&_!=t_4@ud02w7hle8o77sitn'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECURITY WARNING: don't run with debug turned on in production!!!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-env.eba-ibcmvrkp.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['my-env.eba-dndqchkp.us-west-2.elasticbeanstalk.com']
+
 
 
 # Application definition
