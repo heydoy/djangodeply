@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doy's Diary</title>
+    <style>
+        * { margin: 0; padding: 0; color: #323; box-sizing: border-box; font-family: serif; }
+        a {text-decoration: none;}
+        body { background: #eee;}
+        .home { width: 300px; height: 300px; padding-top: 50px; margin: 200px auto; background-color: aquamarine; text-align: center; }  
+        button { width: 60px; height: 60px; cursor: pointer; color: aquamarine; background-color: white; border: dotted aquamarine 3px; font-size: 1.3em;}
+        button:hover { border: dotted white 3px; background-color:aquamarine; color: white; }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <h1>Hello!</h1>
+        <h1>Welcome to doy's diary</h1>
+        <br>
+        <a href ="{% url 'diary' %}"><button type="button" >click here</button></a>
+    </div>
+</body>
+</html>

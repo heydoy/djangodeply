@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doy's Diary</title>
+    <style>
+        * { margin: 0; padding: 0; color: #323; box-sizing: border-box; font-family: serif; }
+        a {text-decoration: none;}
+        body { background: #eee;}
+        .container { width: 600px; height:fit-content; padding-top: 50px; margin: 50px auto; background-color: aquamarine; text-align: center; }  
+        .divider {width: 300px; height: 2px; background: #000; margin: 10px auto;}
+        .card {width: 500px; height: fit-content; margin: 30px auto 0; padding: 10px; text-align: left; background: #fff; border: solid 2px black; }
+        button { width: 60px; height: 60px; margin: 20px; cursor: pointer; color: aquamarine; background-color: #000; border-style: none; }
+        h1 {font-size: 1.5em; font-weight: bolder; font-family: sans-serif;}
+        p.date { color: #888; background: #eee; font-size: 0.8em;}
+        p.main { font-family: sans-serif; margin-top: 8px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>doy diary</h1>
+    <div class="divider"></div>
+    {% for blog in blogs.all %}
+        <div class="card">
+        <a href="{% url 'detail' blog.id %}">
+        <h1>{{ blog.title }}</h1>
+        <p class="date"> {{ blog.pub_date }} </p>
+        <p class="main" >{{ blog.summary }} ......</p>
+        </a>
+        </div>
+    {% endfor %}
+    
+    <a href ="{% url 'home' %}"><button type="button">back to home</button></a>
+    </div>
+</body>
+</html>
